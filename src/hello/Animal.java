@@ -11,6 +11,10 @@ public class Animal implements LivingThings{
 	int height;
 	int weight;
 	
+	public Animal(){
+		
+	}
+	
 	
 	public static void main(String[] args) {
 

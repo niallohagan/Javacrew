@@ -7,5 +7,9 @@ public class Snake extends Reptile{
 	boolean nocturnal;
 	boolean dangerous;
 	boolean endangered;
+	
+	public Snake(){
+		
+	}
 
 }
