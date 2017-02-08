@@ -4,15 +4,14 @@ public class Snake extends Reptile {
 
 	private boolean poisonous;
 	private boolean venomous;
-	private boolean nocturnal;
 	private boolean dangerous;
 	private boolean endangered;
 
-	public Snake(boolean poisonous, boolean venomous, boolean nocturnal, boolean dangerous, boolean endangered) {
-		super(gender, age, gender, gender, gender, age, age, poisonous, venomous, nocturnal, dangerous, endangered);
+	public Snake(String name, String species, String gender, String size, int age, int height, int weight, 
+			boolean poisonous, boolean endangered, boolean venomous, boolean dangerous) {
+		super(name, age, gender, size, species, height, weight);
 		this.poisonous = poisonous;
 		this.venomous = venomous;
-		this.nocturnal = nocturnal;
 		this.dangerous = dangerous;
 		this.endangered = endangered;
 	}
@@ -23,7 +22,7 @@ public class Snake extends Reptile {
 	}
 
 	@Override
-	public void nutrition() {
+	public void nutrition() { 
 
 	}
 
@@ -47,14 +46,7 @@ public class Snake extends Reptile {
 		this.venomous = venomous;
 	}
 
-	public boolean isNocturnal() {
-		return nocturnal;
-	}
-
-	public void setNocturnal(boolean nocturnal) {
-		this.nocturnal = nocturnal;
-	}
-
+	
 	public boolean isDangerous() {
 		return dangerous;
 	}

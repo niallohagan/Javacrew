@@ -4,8 +4,8 @@ public class Penguin extends Bird implements Swim {
 
 	private boolean endangered;
 
-	public Penguin(boolean endangered) {
-		super();
+	public Penguin(String name, String species, String gender, String size, int age, int height, int weight, boolean endangered) {
+		super(name, age, gender, size, species, height, weight);
 		this.endangered = endangered;
 	}
 

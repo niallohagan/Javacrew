@@ -2,10 +2,11 @@ package hello;
 
 public class Bat extends Mammal implements Flying {
 
-	boolean nocturnal;
-	boolean endangered;
+	private boolean nocturnal;
+	private boolean endangered;
 
-	public Bat(boolean nocturnal, boolean endangered) {
+	public Bat(String name, String species, String gender, String size, int age, int height, int weight, boolean nocturnal, boolean endangered) {
+		super(name, age, gender, size, species, height, weight);
 		this.nocturnal = nocturnal;
 		this.endangered = endangered;
 	}

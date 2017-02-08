@@ -4,8 +4,8 @@ public class Pigeon extends Bird implements Flying {
 
 	boolean endangered;
 
-	public Pigeon(boolean endangered) {
-		super();
+	public Pigeon(String name, String species, String gender, String size, int age, int height, int weight, boolean endangered) {
+		super(name, age, gender, size, species, height, weight);
 		this.endangered = endangered;
 	}
 
