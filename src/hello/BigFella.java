@@ -9,7 +9,7 @@ public class BigFella {
 		animal1.growth();
 		animal1.movement();
 		animal1.nutrition();
-		animal1.reproduction();
+		animal1.reproduction(); 
 
 	}
 
