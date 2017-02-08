@@ -28,16 +28,16 @@ public class Animal implements LivingThings {
 
 	@Override
 	public void reproduction() {
-		if(species=="mammal"){
+		if(species.equals("mammal")){
 			System.out.println("Live young");
 		}else
-			if(species=="amphibian"){
-				System.out.println("Lays soft shelled eggs");
+			if(species.equals("amphibian")){
+				System.out.println("Lays soft shelled eggs"); 
 			}else
-				if(species=="reptile"){
+				if(species.equals("reptile")){
 					System.out.println("Lays hard shelled eggs");
 				}else
-					if(species=="bird"){
+					if(species.equals("bird")){
 						System.out.println("Lays eggs");
 					}
 					else{
