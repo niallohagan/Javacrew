@@ -7,7 +7,7 @@ public class Animal implements LivingThings {
 	private String species;
 	private String gender;
 	private String size;
-	private int height;
+	protected int height;
 	private int weight;
 
 	public Animal(String name, int age, String species, String gender, String size, int height, int weight) {
@@ -23,37 +23,50 @@ public class Animal implements LivingThings {
 
 	@Override
 	public void excretion() {
-
+		System.out.println("Animal excretes");
 	}
 
 	@Override
 	public void reproduction() {
-
+		System.out.println("Animal reproduces");
 	}
 
 	@Override
 	public void respiration() {
-
+		System.out.println("Animal respires");
 	}
 
 	@Override
 	public void movement() {
-
+		if (size != "small") {
+			System.out.println("Animal moves a lot and needs a large enclosure");
+		} else {
+			System.out.println("Animal can live in a small enclosure");
+		}
 	}
 
 	@Override
 	public void sensitivity() {
-
+		System.out.println("Animal is sensitive");
 	}
 
 	@Override
 	public void growth() {
-
+		if (height <= 50) {
+			size = "small";
+		} else {
+			size = "large";
+		}
+		System.out.println(size);
 	}
 
 	@Override
 	public void nutrition() {
-
+if(weight>70){
+	System.out.println("Animal needs fed three times a day");
+}else{
+	System.out.println("One feeding a day is enough");
+}
 	}
 
 	public String getName() {
