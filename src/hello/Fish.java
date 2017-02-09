@@ -8,18 +8,21 @@ public class Fish extends Animal implements Swim {
 	}
 
 	@Override
-	public void movement() {
+	public String movement() {
 		System.out.println("fish moves");
+		return null;
 	}
 
 	@Override
 	public void respiration() {
 		System.out.println("fish respires");
+		
 	}
 
 	@Override
-	public void growth() {
+	public String growth() {
 		System.out.println("fish grows");
+		return null;
 	}
 
 	@Override

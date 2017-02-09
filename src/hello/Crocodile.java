@@ -13,18 +13,20 @@ public class Crocodile extends Reptile implements Swim {
 	}
 
 	@Override
-	public void growth() {
+	public String growth() {
 		if (height <= 30) {
 			setSize("small");
 		} else {
 			setSize("large");
 		}
 		System.out.println("Crocodile is : " + getSize());
+		return null;
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("croc eats");
+		return null;
 	}
 
 	@Override

@@ -9,12 +9,13 @@ public class Reptile extends Animal {
 
 
 	@Override
-	public void growth() {
+	public String growth() {
 		if (height <= 20) {
 			setSize("small");
 		} else {
 			setSize("large");
 		}
 		System.out.println("Reptile is : " + getSize());
+		return null;
 	}
 }

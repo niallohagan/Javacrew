@@ -8,17 +8,20 @@ public class Invertebrate extends Animal {
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("invert eats");
+		return null;
 	}
 
 	@Override
-	public void movement() {
+	public String movement() {
 		System.out.println("invert moves");
+		return null;
 	}
 
 	@Override
-	public void growth() {
-		System.out.println("fish grows");
+	public String growth() {
+		System.out.println("invert grows");
+		return null;
 	}
 }

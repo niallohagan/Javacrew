@@ -8,14 +8,16 @@ public class Amphibian extends Animal implements Swim {
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("amphibian eats");
+		return null;
 	}
 
 	
 	@Override
-	public void growth() {
+	public String growth() {
 		System.out.println("amphibian grows");
+		return null;
 	}
 
 	@Override

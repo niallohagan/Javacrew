@@ -1,6 +1,6 @@
 package hello;
 
-public class Animal implements LivingThings {
+public abstract class Animal implements LivingThings {
 
 	private String name;
 	private int age;
@@ -11,7 +11,8 @@ public class Animal implements LivingThings {
 	private int weight;
 	private double waste;
 
-	public Animal(String name, int age, String species, String gender, String size, int height, int weight, double waste) {
+	public Animal(String name, int age, String species, String gender, String size, int height, int weight,
+			double waste) {
 		this.name = name;
 		this.age = age;
 		this.species = species;
@@ -24,27 +25,30 @@ public class Animal implements LivingThings {
 	}
 
 	@Override
-	public void excretion() {
-		System.out.println("Animal excretes");
+	public String excretion() {
+		if (waste > 4.0) {
+			System.out.println("Animal excretes");
+		} else {
+			System.out.println("Animal does not excrete");
+		}
+		return null;
 	}
 
 	@Override
-	public void reproduction() {
-		if(species.equals("mammal")){
+	public String reproduction() {
+		if (species.equals("mammal")) {
 			System.out.println("Gives birth to live young");
-		}else
-			if(species.equals("amphibian")){
-				System.out.println("Lays soft shelled eggs"); 
-			}else
-				if(species.equals("reptile")){
-					System.out.println("Lays hard shelled eggs");
-				}else
-					if(species.equals("bird")){
-						System.out.println("Lays eggs");
-					}
-					else{
-						System.out.println("Lays eggs in water");
-					}
+		} else if (species.equals("amphibian")) {
+			System.out.println("Lays soft shelled eggs");
+		} else if (species.equals("reptile")) {
+			System.out.println("Lays hard shelled eggs");
+		} else if (species.equals("bird")) {
+			System.out.println("Lays eggs");
+		} else {
+			System.out.println("Lays eggs in water");
+		}
+		return null;
+		
 	}
 
 	@Override
@@ -53,36 +57,40 @@ public class Animal implements LivingThings {
 	}
 
 	@Override
-	public void movement() {
+	public String movement() {
 		if (size != "small") {
 			System.out.println("Animal moves a lot and needs a large enclosure");
 		} else {
 			System.out.println("Animal can live in a small enclosure");
 		}
+		return null;
 	}
 
 	@Override
 	public void sensitivity() {
 		System.out.println("Animal is sensitive");
+		
 	}
 
 	@Override
-	public void growth() {
+	public String growth() {
 		if (height <= 50) {
 			size = "small";
 		} else {
 			size = "large";
 		}
 		System.out.println(size);
+		return null;
 	}
 
 	@Override
-	public void nutrition() {
-if(weight>70){
-	System.out.println("Animal needs fed three times a day");
-}else{
-	System.out.println("One feeding a day is enough");
-}
+	public String nutrition() {
+		if (weight > 70) {
+			System.out.println("Animal needs fed three times a day");
+		} else {
+			System.out.println("One feeding a day is enough");
+		}
+		return null;
 	}
 
 	public String getName() {
@@ -140,12 +148,12 @@ if(weight>70){
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
-	
+
 	public double getWaste() {
 		return waste;
 	}
 
-	public void setWaste(int waste) {
+	public void setWaste(double waste) {
 		this.waste = waste;
 	}
 

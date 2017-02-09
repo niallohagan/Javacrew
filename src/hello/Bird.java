@@ -7,7 +7,8 @@ public class Bird extends Animal {
 
 	}
 
-	public void growth() {
+	public String growth() {
 		System.out.println("Bird grows");
+		return null;
 	}
 }

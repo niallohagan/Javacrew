@@ -13,8 +13,9 @@ public class Cat extends Mammal {
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("cat eats");
+		return null;
 	}
 
 	@Override

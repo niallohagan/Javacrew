@@ -8,13 +8,15 @@ public class Mammal extends Animal implements Run {
 	}
 
 	@Override
-	public void reproduction() {
+	public String reproduction() {
 		System.out.println("mammal reproduces");
+		return null;
 	}
 
 	@Override
-	public void growth() {
+	public String growth() {
 		System.out.println("mamml grows");
+		return null;
 	}
 
 	@Override

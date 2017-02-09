@@ -13,8 +13,9 @@ public class Bat extends Mammal implements Flying {
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("Bat eats");
+		return null;
 	}
 
 	@Override

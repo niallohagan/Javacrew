@@ -26,8 +26,9 @@ public class Pigeon extends Bird implements Flying {
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("pigeon eats");
+		return null;
 	}
 
 	public boolean isEndangered() {

@@ -16,23 +16,26 @@ public class Snake extends Reptile {
 		this.endangered = endangered;
 	}
 	@Override
-	public void growth() {
+	public String growth() {
 		if (height <= 10) {
 			setSize("small");
 		} else {
 			setSize("large");
 		}
 		System.out.println("Snake is : " + getSize());
+		return null;
 	}
 
 	@Override
-	public void movement() {
+	public String movement() {
 		System.out.println("snake moves");
+		return null;
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("snake eats");
+		return null;
 	}
 
 	public boolean isPoisonous() {

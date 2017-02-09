@@ -21,8 +21,9 @@ public class Penguin extends Bird implements Swim {
 	}
 
 	@Override
-	public void nutrition() {
+	public String nutrition() {
 		System.out.println("Penguin eats");
+		return null;
 	}
 
 	public boolean isEndangered() {

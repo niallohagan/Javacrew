@@ -2,11 +2,11 @@ package hello;
 
 public interface LivingThings {
 
-	void movement();
+	String movement();
 	void respiration();
 	void sensitivity();
-	void nutrition();
-	void excretion();
-	void reproduction();
-	void growth();
+	String nutrition();
+	String excretion();
+	String reproduction();
+	String growth(); 
 }

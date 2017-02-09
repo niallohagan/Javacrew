@@ -172,27 +172,7 @@ public class AnimalTest {
 		assertEquals(testSnake.getWeight(), 275);
 
 	}
-	@Test
-
-	public void testGetAnimalWaste() {
-
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0.0, true, false, true, true);
-
-		assertEquals(testSnake.getWaste(), 0.0);
-
-	}
-
-	@Test
-
-	public void testSetAnimalWaste() {
-
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0.0, true, false, true, true);
-
-		testSnake.setWaste(10);
-
-		assertEquals(testSnake.getWaste(), 10.0);
-
-	}
+	
 
 	@Test
 
