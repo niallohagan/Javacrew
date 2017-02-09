@@ -9,8 +9,9 @@ public class Animal implements LivingThings {
 	private String size;
 	protected int height;
 	private int weight;
+	private double waste;
 
-	public Animal(String name, int age, String species, String gender, String size, int height, int weight) {
+	public Animal(String name, int age, String species, String gender, String size, int height, int weight, double waste) {
 		this.name = name;
 		this.age = age;
 		this.species = species;
@@ -18,6 +19,7 @@ public class Animal implements LivingThings {
 		this.size = size;
 		this.height = height;
 		this.weight = weight;
+		this.waste = waste;
 
 	}
 
@@ -29,7 +31,7 @@ public class Animal implements LivingThings {
 	@Override
 	public void reproduction() {
 		if(species.equals("mammal")){
-			System.out.println("Live young");
+			System.out.println("Gives birth to live young");
 		}else
 			if(species.equals("amphibian")){
 				System.out.println("Lays soft shelled eggs"); 
@@ -137,6 +139,14 @@ if(weight>70){
 
 	public void setWeight(int weight) {
 		this.weight = weight;
+	}
+	
+	public double getWaste() {
+		return waste;
+	}
+
+	public void setWaste(int waste) {
+		this.waste = waste;
 	}
 
 }
