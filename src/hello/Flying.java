@@ -2,7 +2,7 @@ package hello;
 
 public interface Flying {
 
-	 void flight();
-     void takeOff();
-     void landing();
+	 String flight();
+     String takeOff();
+     String landing();
 }

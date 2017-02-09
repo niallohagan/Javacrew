@@ -2,11 +2,11 @@ package hello;
 
 public class Reptile extends Animal {
 
-	public Reptile(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor) {
-		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor);
+	public Reptile(String name, int age, String species, String gender, String size, int height, int weight, int waste,
+			int foodmass, double growthFactor, int breathingRate) {
+		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
 
 	}
-
 
 	@Override
 	public String growth() {
@@ -15,7 +15,7 @@ public class Reptile extends Animal {
 		} else {
 			setSize("large");
 		}
-		System.out.println("Reptile is : " + getSize());
-		return null;
+
+		return getSize();
 	}
 }

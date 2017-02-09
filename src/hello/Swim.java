@@ -1,7 +1,8 @@
 package hello;
 
+@FunctionalInterface
 public interface Swim {
 
-	void canSwim();
-	void breathesUnderwater();
-}
+	String canSwim();
+	
+} 

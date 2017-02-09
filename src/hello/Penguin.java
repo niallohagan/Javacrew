@@ -2,25 +2,41 @@ package hello;
 
 public class Penguin extends Bird implements Swim {
 
+	private boolean abilityToSwim;
 	private boolean endangered;
 
-	public Penguin(String name, String species, String gender, String size, int age, int height, int weight, int waste, int foodmass, double growthFactor,
-			boolean endangered) {
-		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor);
+	public Penguin(String name, String species, String gender, String size, int age, int height, int weight, int waste,
+			int foodmass, double growthFactor, int breathingRate, boolean endangered) {
+		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor, breathingRate);
 		this.endangered = endangered;
 	}
 
 	@Override
-	public void canSwim() {
-		System.out.println("penguin swims");
+	public String growth() {
+		if (height <= 35) {
+			setSize("small");
+		} else {
+			setSize("large");
+		}
+		return getSize();
 	}
 
 	@Override
-	public void breathesUnderwater() {
-		System.out.println("Penguins dont actually breathe underwater but hold their breath for a long time.");
+	public String canSwim() {
+		if (abilityToSwim == true) {
+			return "enclosure needs a pool";
+		}
+		return null;
+
 	}
 
-	
+	public boolean isAbilityToSwim() {
+		return abilityToSwim;
+	}
+
+	public void setAbilityToSwim(boolean abilityToSwim) {
+		this.abilityToSwim = abilityToSwim;
+	}
 
 	public boolean isEndangered() {
 		return endangered;

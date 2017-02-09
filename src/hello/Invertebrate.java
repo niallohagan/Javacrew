@@ -2,12 +2,11 @@ package hello;
 
 public class Invertebrate extends Animal {
 
-	public Invertebrate(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor) {
-		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor);
+	public Invertebrate(String name, int age, String species, String gender, String size, int height, int weight,
+			int waste, int foodmass, double growthFactor, int breathingRate) {
+		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
 
 	}
-
-	
 
 	@Override
 	public String movement() {
@@ -17,12 +16,16 @@ public class Invertebrate extends Animal {
 
 	@Override
 	public String growth() {
-		System.out.println("invert grows");
-		return null;
-	}
-	
-	@Override
-	public String reproduction(){
-		return "Invertebrates reproduce differently to vertebrates";
+		if (height <= 12) {
+			setSize("small");
+		} else {
+			setSize("large");
 		}
+		return getSize();
+	}
+
+	@Override
+	public String reproduction() {
+		return "Invertebrates reproduce differently to vertebrates";
+	}
 }

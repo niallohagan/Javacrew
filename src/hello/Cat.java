@@ -5,18 +5,23 @@ public class Cat extends Mammal {
 	private boolean endangered;
 	private boolean nocturnal;
 
-	public Cat(String name, String species, String gender, String size, int age, int height, int weight, int waste, int foodmass, double growthFactor,
-			boolean nocturnal, boolean endangered) {
-		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor);
+	public Cat(String name, String species, String gender, String size, int age, int height, int weight, int waste,
+			int foodmass, double growthFactor, int breathingRate, int speed, int sprintFactor, boolean nocturnal,
+			boolean endangered) {
+		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor, breathingRate, speed,
+				sprintFactor);
 		this.endangered = endangered;
-		this.nocturnal = nocturnal; 
+		this.nocturnal = nocturnal;
 	}
 
-	
-
 	@Override
-	public void sprint() {
-		System.out.println("cat sprints");
+	public String growth() {
+		if (height <= 30) {
+			setSize("small");
+		} else {
+			setSize("large");
+		}
+		return getSize();
 	}
 
 	public boolean isEndangered() {

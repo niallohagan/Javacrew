@@ -2,31 +2,61 @@ package hello;
 
 public class Pigeon extends Bird implements Flying {
 
+	
+	private int optimalFlightTime;
+	private int landingSpeed;
+	private int takeOffSpeed;
+	private int power;
 	boolean endangered;
 
-	public Pigeon(String name, String species, String gender, String size, int age, int height, int weight, int waste, int foodmass, double growthFactor,
+	public Pigeon(String name, String species, String gender, String size, int age, int height, int weight,
+			int waste, int foodmass, double growthFactor, int breathingRate,
 			boolean endangered) {
-		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor);
+		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor, breathingRate);
 		this.endangered = endangered;
 	}
 
 	@Override
-	public void flight() {
-		System.out.println("pigeon flys");
+	public String growth() {
+		if (height <= 15) {
+			setSize("small");
+		} else {
+			setSize("large");
+		}
+		return getSize();
+	}
+	@Override
+	public String takeOff() {
+		if (getSpeed() * power == takeOffSpeed) {
+			return "Take off successful";
+		} else {
+            return "take off not successful";
+		}
+	}
+	@Override
+	public String landing(){
+		int speed = 0;
+		if(speed ==landingSpeed)
+				{
+			return "safe landing";
+		}else{
+			return "crash landing";
+		}
+
 	}
 
 	@Override
-	public void landing() {
-		System.out.println("pigeon lands");
-	}
-
-	@Override
-	public void takeOff() {
-		System.out.println("pigeon takes off");
+	public String flight() {
+		int flightTime = 0;
+		if (flightTime <= optimalFlightTime) {
+			return "Bat has a lovely flight";
+		} else {
+			return "Bat crashes";
+		}
 	}
 
 	
-
+	
 	public boolean isEndangered() {
 		return endangered;
 	}
@@ -34,5 +64,39 @@ public class Pigeon extends Bird implements Flying {
 	public void setEndangered(boolean endangered) {
 		this.endangered = endangered;
 	}
+
+	public int getOptimalFlightTime() {
+		return optimalFlightTime;
+	}
+
+	public void setOptimalFlightTime(int optimalFlightTime) {
+		this.optimalFlightTime = optimalFlightTime;
+	}
+
+	public int getLandingSpeed() {
+		return landingSpeed;
+	}
+
+	public void setLandingSpeed(int landingSpeed) {
+		this.landingSpeed = landingSpeed;
+	}
+
+	public int getTakeOffSpeed() {
+		return takeOffSpeed;
+	}
+
+	public void setTakeOffSpeed(int takeOffSpeed) {
+		this.takeOffSpeed = takeOffSpeed;
+	}
+
+	public int getPower() {
+		return power;
+	}
+
+	public void setPower(int power) {
+		this.power = power;
+	}
+
+	
 
 }

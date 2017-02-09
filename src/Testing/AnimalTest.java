@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import hello.Animal;
 import hello.Snake;
 
 public class AnimalTest {
@@ -14,7 +15,7 @@ public class AnimalTest {
 
 	@Test
 	public void testAnimalConstructor() {
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 		assertNotNull(testSnake);
 	}
 
@@ -24,7 +25,7 @@ public class AnimalTest {
 
 	public void testGetAnimalName() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getName(), "Hissy");
 
@@ -34,7 +35,7 @@ public class AnimalTest {
 
 	public void testSetAnimalName() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setName("Slider");
 
@@ -45,7 +46,7 @@ public class AnimalTest {
 
 	public void testGetAnimalAge() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getAge(), 3);
 
@@ -55,7 +56,7 @@ public class AnimalTest {
 
 	public void testSetAnimalAge() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setAge(12);
 
@@ -68,7 +69,7 @@ public class AnimalTest {
 
 	public void testGetAnimalSpecies() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "male", "Viper", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getSpecies(), "Viper");
 
@@ -78,7 +79,7 @@ public class AnimalTest {
 
 	public void testSetAnimalSpecies() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setSpecies("Python");
 
@@ -90,7 +91,7 @@ public class AnimalTest {
 
 	public void testGetAnimalGender() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "Large", "male", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getGender(), "male");
 
@@ -100,7 +101,7 @@ public class AnimalTest {
 
 	public void testSetAnimalGender() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setGender("Female");
 
@@ -112,7 +113,7 @@ public class AnimalTest {
 
 	public void testGetAnimalSize() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Large", "male", "Viper", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getSize(), "Large");
 
@@ -122,7 +123,7 @@ public class AnimalTest {
 
 	public void testSetAnimalSize() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setSize("Small");
 
@@ -135,7 +136,7 @@ public class AnimalTest {
 
 	public void testGetAnimalHeight() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getHeight(), 20);
 
@@ -145,7 +146,7 @@ public class AnimalTest {
 
 	public void testSetAnimalHeight() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setHeight(10);
 
@@ -157,7 +158,7 @@ public class AnimalTest {
 
 	public void testGetAnimalWeight() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getWeight(), 150);
 
@@ -167,7 +168,7 @@ public class AnimalTest {
 
 	public void testSetAnimalWeight() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setWeight(275);
 
@@ -178,7 +179,7 @@ public class AnimalTest {
 
 	public void testGetWaste() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getWaste(), 0);
 
@@ -188,7 +189,7 @@ public class AnimalTest {
 
 	public void testSetWaste() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setWaste(12);
 
@@ -200,7 +201,7 @@ public class AnimalTest {
 
 	public void testGetFoodmass() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.getFoodmass(), 0);
 
@@ -210,7 +211,7 @@ public class AnimalTest {
 
 	public void testSetFoodmass() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setFoodmass(20);
 
@@ -219,10 +220,54 @@ public class AnimalTest {
 	}
 	
 	@Test
+	
+	public void testgetGrowthFactor() {
+
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
+
+		assertEquals(testSnake.getGrowthFactor(), 0.0, 0.0);
+
+	}
+
+	@Test
+
+	public void testsetGrowthFactor() {
+
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
+
+		testSnake.setGrowthFactor(12);
+
+		assertEquals(testSnake.getGrowthFactor(), 12.0, 0.0);
+
+	}
+	
+	@Test
+	
+	public void testBreathingRate() { 
+
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
+
+		assertEquals(testSnake.getBreathingRate(), 0);
+
+	}
+
+	@Test
+
+	public void testSetBreathingRate() {
+
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
+
+		testSnake.setBreathingRate(12);
+
+		assertEquals(testSnake.getBreathingRate(), 12);
+
+	}
+	
+	@Test
 
 	public void testGetAnimalPoisonous() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.isPoisonous(), true);
 	}
@@ -231,7 +276,7 @@ public class AnimalTest {
 
 	public void testSetPoisonous() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setPoisonous(false);
 
@@ -243,7 +288,7 @@ public class AnimalTest {
 
 	public void testGetEndangered() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.isEndangered(), false);
 	}
@@ -252,7 +297,7 @@ public class AnimalTest {
 
 	public void testSetEndangered() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setEndangered(true);
 
@@ -264,7 +309,7 @@ public class AnimalTest {
 
 	public void testGetVenomous() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.isVenomous(), true);
 	}
@@ -273,7 +318,7 @@ public class AnimalTest {
 
 	public void testSetVenomous() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setVenomous(false);
 
@@ -285,7 +330,7 @@ public class AnimalTest {
 
 	public void testGetDangerous() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		assertEquals(testSnake.isDangerous(), true);
 	}
@@ -294,7 +339,7 @@ public class AnimalTest {
 
 	public void testSetDangerous() {
 
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
 		testSnake.setDangerous(false);
 
@@ -307,7 +352,7 @@ public class AnimalTest {
 	//test to check nutrition
 	
 	public void testNutrition(){
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 		testSnake.setWeight(100);
 		testSnake.setFoodmass(20);
 		
@@ -320,7 +365,7 @@ public class AnimalTest {
 	//test to check excretion
 	
 	public void testExcretion(){
-		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, true, false, true, true);
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 		testSnake.setWeight(100);
 		testSnake.setFoodmass(20);
 		
@@ -333,11 +378,56 @@ public class AnimalTest {
 //test to check size
 
 public void testSize(){
-	Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 1.0, true, false, true, true);
+	Snake testSnake = new Snake("Hissy", "Large", "male", "Viper", 3, 20, 150, 0, 0, 2.0, 0, true, false, true, true);
 	testSnake.setHeight(100);
 	testSnake.setGrowthFactor(2.0);
 	
 	testSnake.size();
 	assertEquals(200.0, testSnake.getSize());
+}
+
+@Test
+
+//test to check respiration
+
+public void testRespiration(){
+	Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 1.0, 0, true, false, true, true);
+	testSnake.respiration();
+	
+	testSnake.setBreathingRate(90);
+	assertEquals(90, testSnake.getBreathingRate());
+}
+
+@Test
+
+//test to check movement
+
+public void testMovement(){
+	Snake testSnake = new Snake("Hissy", "Viper", "small", "male", 3, 20, 150, 0, 0, 1.0, 0, true, false, true, true);
+	testSnake.movement();
+	testSnake.getSpecies();
+	assertEquals("small", testSnake.getSpecies());
+}
+
+@Test
+
+//test to check reproduction
+
+public void testReproduction(){
+	Snake testSnake = new Snake("Hissy", "small", "male", "Viper", 3, 20, 150, 0, 0, 1.0, 0, true, false, true, true);
+	testSnake.reproduction();
+	testSnake.getSize();
+	assertEquals("small", testSnake.getSize());
+}
+
+@Test
+
+//test to check Growth
+
+public void testGrowth(){
+	Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 1.0, 0, true, false, true, true);
+	testSnake.growth();
+	testSnake.setHeight(20);
+	assertEquals(20, testSnake.getHeight());
 }
 }

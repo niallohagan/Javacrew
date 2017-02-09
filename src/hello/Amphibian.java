@@ -1,35 +1,52 @@
 package hello;
 
+
+
+
 public class Amphibian extends Animal implements Swim {
 
-	public Amphibian(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor) {
-		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor);
+	private boolean abilityToSwim;
+	
+	public Amphibian(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor, int breathingRate) {
+		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
 
 	}
-
-	/*@Override
-	public 	int nutrition() {
-		setWeight(getWeight()+getFoodmass());
-		System.out.println(getWeight());
-		return getWeight();
-	}*/
 
 	
+	
 	@Override
-	public String growth() {
-		System.out.println("amphibian grows");
-		return null;
+	public String growth(){
+	if (height <= 60) {
+		setSize("small");
+	} else {
+		setSize("large");
 	}
 
+	return getSize();
+}
+
 	@Override
-	public void canSwim() {
-		System.out.println("amphibian can swim");
+	public String canSwim() {
+		if (abilityToSwim == true) {
+			return "enclosure needs a pool";
+		} else {
+			return "enclosure doesnt need a pool";
+		}
+		
 		
 	}
 
-	@Override
-	public void breathesUnderwater() {
-		
-		System.out.println("amphibian can breathe underwater");
+
+
+	public boolean isAbilityToSwim() {
+		return abilityToSwim;
 	}
+
+
+
+	public void setAbilityToSwim(boolean abilityToSwim) {
+		this.abilityToSwim = abilityToSwim;
+	}
+
+	
 }

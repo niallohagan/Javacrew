@@ -2,36 +2,39 @@ package hello;
 
 public class Fish extends Animal implements Swim {
 
-	public Fish(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor) {
-		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor);
+	private boolean abilityToSwim;
 
-	}
+	public Fish(String name, int age, String species, String gender, String size, int height, int weight, int waste,
+			int foodmass, double growthFactor, int breathingRate) {
+		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
 
-	@Override
-	public String movement() {
-		System.out.println("fish moves");
-		return null;
-	}
-
-	@Override
-	public void respiration() {
-		System.out.println("fish respires");
-		
 	}
 
 	@Override
 	public String growth() {
-		System.out.println("fish grows");
-		return null;
+		if (height <= 25) {
+			setSize("small");
+		} else {
+			setSize("large");
+		}
+		return getSize();
 	}
 
 	@Override
-	public void canSwim() {
-		System.out.println("fish swims");
+	public String canSwim() {
+		if (abilityToSwim == true) {
+			return "enclosure needs a pool";
+		} else {
+			return "enclosure doesnt need a pool";
+		}
 	}
 
-	@Override
-	public void breathesUnderwater() {
-		System.out.println("fish breathes underwater");
+	public boolean isAbilityToSwim() {
+		return abilityToSwim;
 	}
+
+	public void setAbilityToSwim(boolean abilityToSwim) {
+		this.abilityToSwim = abilityToSwim;
+	}
+
 }

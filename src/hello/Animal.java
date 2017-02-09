@@ -12,9 +12,10 @@ public abstract class Animal implements LivingThings {
 	private int waste;
 	private int foodmass;
 	private double growthFactor;
+	private int breathingRate;
 
-	public Animal(String name, int age, String species, String gender, String size, int height, int weight,
-			int waste, int foodmass, double growthFactor) {
+	public Animal(String name, int age, String species, String gender, String size, int height, int weight, int waste,
+			int foodmass, double growthFactor, int breathingRate) {
 		this.name = name;
 		this.age = age;
 		this.species = species;
@@ -25,21 +26,22 @@ public abstract class Animal implements LivingThings {
 		this.waste = waste;
 		this.foodmass = foodmass;
 		this.growthFactor = growthFactor;
+		this.breathingRate = breathingRate;
 
 	}
 
 	@Override
 	public int nutrition() {
-		weight = weight+foodmass;
-		
+		weight = weight + foodmass;
+
 		return weight;
 	}
 
 	@Override
 	public double excretion() {
-		waste = foodmass/5;
+		waste = foodmass / 5;
 		weight = weight - waste;
-		
+
 		return weight;
 	}
 
@@ -48,21 +50,26 @@ public abstract class Animal implements LivingThings {
 		if ("mammal".equals(species)) {
 			return "Gives birth to live young";
 		} else if ("amphibian".equals(species)) {
-			return"Lays soft shelled eggs";
+			return "Lays soft shelled eggs";
 		} else if ("reptile".equals(species)) {
-			return"Lays hard shelled eggs";
+			return "Lays hard shelled eggs";
 		} else if ("bird".equals(species)) {
-			return"Lays eggs";
+			return "Lays eggs";
 		} else {
-			return"Lays eggs in water";
+			return "Lays eggs in water";
 		}
-		
 
 	}
 
 	@Override
-	public void respiration() {
-		
+	public String respiration() {
+		if (breathingRate < 100) {
+			return "animal is healthy";
+		} else if (breathingRate == 0) {
+			return "animal is dead";
+		} else {
+			return "animal needs medical aid";
+		}
 	}
 
 	@Override
@@ -70,25 +77,19 @@ public abstract class Animal implements LivingThings {
 		if (size != "small") {
 			return "Animal moves a lot and needs a large enclosure";
 		} else {
-			return "Animal can live in a small enclosure";
+			return "Animal can live in a smaller enclosure";
 		}
-		
-	}
-
-	@Override
-	public void sensitivity() {
-		System.out.println("Animal is sensitive");
 
 	}
 
-	
 	public double size() {
-		height = (int) (height*growthFactor);
+		height = (int) (height * growthFactor);
 
 		return height;
 	}
-		
-		public String growth(){
+
+	@Override
+	public String growth() {
 		if (height <= 50) {
 			size = "small";
 		} else {
@@ -177,6 +178,13 @@ public abstract class Animal implements LivingThings {
 	public void setGrowthFactor(double growthFactor) {
 		this.growthFactor = growthFactor;
 	}
-	
+
+	public int getBreathingRate() {
+		return breathingRate;
+	}
+
+	public void setBreathingRate(int breathingRate) {
+		this.breathingRate = breathingRate;
+	}
 
 }

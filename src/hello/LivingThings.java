@@ -3,8 +3,7 @@ package hello;
 public interface LivingThings {
 
 	String movement();
-	void respiration();
-	void sensitivity();
+	String respiration();
 	int nutrition();
 	double excretion();
 	String reproduction();
