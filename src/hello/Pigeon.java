@@ -4,9 +4,9 @@ public class Pigeon extends Bird implements Flying {
 
 	boolean endangered;
 
-	public Pigeon(String name, String species, String gender, String size, int age, int height, int weight, double waste,
+	public Pigeon(String name, String species, String gender, String size, int age, int height, int weight, int waste, int foodmass, double growthFactor,
 			boolean endangered) {
-		super(name, age, gender, size, species, height, weight, waste);
+		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor);
 		this.endangered = endangered;
 	}
 
@@ -25,11 +25,7 @@ public class Pigeon extends Bird implements Flying {
 		System.out.println("pigeon takes off");
 	}
 
-	@Override
-	public String nutrition() {
-		System.out.println("pigeon eats");
-		return null;
-	}
+	
 
 	public boolean isEndangered() {
 		return endangered;

@@ -5,8 +5,8 @@ public interface LivingThings {
 	String movement();
 	void respiration();
 	void sensitivity();
-	String nutrition();
-	String excretion();
+	int nutrition();
+	double excretion();
 	String reproduction();
 	String growth(); 
 }

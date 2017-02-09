@@ -9,10 +9,12 @@ public abstract class Animal implements LivingThings {
 	private String size;
 	protected int height;
 	private int weight;
-	private double waste;
+	private int waste;
+	private int foodmass;
+	private double growthFactor;
 
 	public Animal(String name, int age, String species, String gender, String size, int height, int weight,
-			double waste) {
+			int waste, int foodmass, double growthFactor) {
 		this.name = name;
 		this.age = age;
 		this.species = species;
@@ -21,76 +23,79 @@ public abstract class Animal implements LivingThings {
 		this.height = height;
 		this.weight = weight;
 		this.waste = waste;
+		this.foodmass = foodmass;
+		this.growthFactor = growthFactor;
 
 	}
 
 	@Override
-	public String excretion() {
-		if (waste > 4.0) {
-			System.out.println("Animal excretes");
-		} else {
-			System.out.println("Animal does not excrete");
-		}
-		return null;
+	public int nutrition() {
+		weight = weight+foodmass;
+		
+		return weight;
+	}
+
+	@Override
+	public double excretion() {
+		waste = foodmass/5;
+		weight = weight - waste;
+		
+		return weight;
 	}
 
 	@Override
 	public String reproduction() {
-		if (species.equals("mammal")) {
-			System.out.println("Gives birth to live young");
-		} else if (species.equals("amphibian")) {
-			System.out.println("Lays soft shelled eggs");
-		} else if (species.equals("reptile")) {
-			System.out.println("Lays hard shelled eggs");
-		} else if (species.equals("bird")) {
-			System.out.println("Lays eggs");
+		if ("mammal".equals(species)) {
+			return "Gives birth to live young";
+		} else if ("amphibian".equals(species)) {
+			return"Lays soft shelled eggs";
+		} else if ("reptile".equals(species)) {
+			return"Lays hard shelled eggs";
+		} else if ("bird".equals(species)) {
+			return"Lays eggs";
 		} else {
-			System.out.println("Lays eggs in water");
+			return"Lays eggs in water";
 		}
-		return null;
 		
+
 	}
 
 	@Override
 	public void respiration() {
-		System.out.println("Animal respires");
+		
 	}
 
 	@Override
 	public String movement() {
 		if (size != "small") {
-			System.out.println("Animal moves a lot and needs a large enclosure");
+			return "Animal moves a lot and needs a large enclosure";
 		} else {
-			System.out.println("Animal can live in a small enclosure");
+			return "Animal can live in a small enclosure";
 		}
-		return null;
+		
 	}
 
 	@Override
 	public void sensitivity() {
 		System.out.println("Animal is sensitive");
-		
+
 	}
 
-	@Override
-	public String growth() {
+	
+	public double size() {
+		height = (int) (height*growthFactor);
+
+		return height;
+	}
+		
+		public String growth(){
 		if (height <= 50) {
 			size = "small";
 		} else {
 			size = "large";
 		}
-		System.out.println(size);
-		return null;
-	}
 
-	@Override
-	public String nutrition() {
-		if (weight > 70) {
-			System.out.println("Animal needs fed three times a day");
-		} else {
-			System.out.println("One feeding a day is enough");
-		}
-		return null;
+		return size;
 	}
 
 	public String getName() {
@@ -149,12 +154,29 @@ public abstract class Animal implements LivingThings {
 		this.weight = weight;
 	}
 
-	public double getWaste() {
+	public int getWaste() {
 		return waste;
 	}
 
-	public void setWaste(double waste) {
+	public void setWaste(int waste) {
 		this.waste = waste;
 	}
+
+	public int getFoodmass() {
+		return foodmass;
+	}
+
+	public void setFoodmass(int foodmass) {
+		this.foodmass = foodmass;
+	}
+
+	public double getGrowthFactor() {
+		return growthFactor;
+	}
+
+	public void setGrowthFactor(double growthFactor) {
+		this.growthFactor = growthFactor;
+	}
+	
 
 }

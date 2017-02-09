@@ -2,8 +2,8 @@ package hello;
 
 public class Fish extends Animal implements Swim {
 
-	public Fish(String name, int age, String species, String gender, String size, int height, int weight, double waste) {
-		super(name, age, species, gender, size, height, weight, waste);
+	public Fish(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor) {
+		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor);
 
 	}
 

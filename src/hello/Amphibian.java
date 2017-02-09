@@ -2,16 +2,17 @@ package hello;
 
 public class Amphibian extends Animal implements Swim {
 
-	public Amphibian(String name, int age, String species, String gender, String size, int height, int weight, double waste) {
-		super(name, age, species, gender, size, height, weight, waste);
+	public Amphibian(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor) {
+		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor);
 
 	}
 
-	@Override
-	public String nutrition() {
-		System.out.println("amphibian eats");
-		return null;
-	}
+	/*@Override
+	public 	int nutrition() {
+		setWeight(getWeight()+getFoodmass());
+		System.out.println(getWeight());
+		return getWeight();
+	}*/
 
 	
 	@Override

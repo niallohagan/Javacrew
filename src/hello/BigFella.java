@@ -6,17 +6,9 @@ public class BigFella {
 
 		
 
-		Reptile rep = new Reptile(null, 0, "reptile", null, null, 30, 30, 0);
-		rep.reproduction();
-		rep.growth();
-
-		Snake snake1 = new Snake(null, null, "reptile", null, 0, 12, 0, 0, false, false, false, false);
-		snake1.growth();
-		
-		
-		Penguin pingu = new Penguin("Pingu", "bird", "male", "large",10, 20, 30, 0, false);
-		pingu.breathesUnderwater();
-		
+		Snake hissy = new Snake(null, null, null, null, 10, 10, 10, 10, 10, 1.1, false, false, false, false);
+		hissy.size();
+		hissy.growth();
 	}
 
 }

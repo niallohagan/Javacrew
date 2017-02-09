@@ -7,9 +7,9 @@ public class Snake extends Reptile {
 	private boolean dangerous;
 	private boolean endangered;
 
-	public Snake(String name, String species, String gender, String size, int age, int height, int weight, double waste,
+	public Snake(String name, String species, String gender, String size, int age, int height, int weight, int waste, int foodmass, double growthFactor,
 			boolean poisonous, boolean endangered, boolean venomous, boolean dangerous) {
-		super(name, age, gender, size, species, height, weight, waste);
+		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor);
 		this.poisonous = poisonous;
 		this.venomous = venomous;
 		this.dangerous = dangerous;
@@ -23,7 +23,7 @@ public class Snake extends Reptile {
 			setSize("large");
 		}
 		System.out.println("Snake is : " + getSize());
-		return null;
+		return getSize();
 	}
 
 	@Override
@@ -32,12 +32,7 @@ public class Snake extends Reptile {
 		return null;
 	}
 
-	@Override
-	public String nutrition() {
-		System.out.println("snake eats");
-		return null;
-	}
-
+	
 	public boolean isPoisonous() {
 		return poisonous;
 	}

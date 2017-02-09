@@ -5,18 +5,14 @@ public class Cat extends Mammal {
 	private boolean endangered;
 	private boolean nocturnal;
 
-	public Cat(String name, String species, String gender, String size, int age, int height, int weight, double waste,
+	public Cat(String name, String species, String gender, String size, int age, int height, int weight, int waste, int foodmass, double growthFactor,
 			boolean nocturnal, boolean endangered) {
-		super(name, age, gender, size, species, height, weight, waste);
+		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor);
 		this.endangered = endangered;
-		this.nocturnal = nocturnal;
+		this.nocturnal = nocturnal; 
 	}
 
-	@Override
-	public String nutrition() {
-		System.out.println("cat eats");
-		return null;
-	}
+	
 
 	@Override
 	public void sprint() {

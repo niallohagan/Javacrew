@@ -5,18 +5,14 @@ public class Bat extends Mammal implements Flying {
 	private boolean nocturnal;
 	private boolean endangered;
 
-	public Bat(String name, String species, String gender, String size, int age, int height, int weight, double waste,
+	public Bat(String name, String species, String gender, String size, int age, int height, int weight, int waste, int foodmass, double growthFactor,
 			boolean nocturnal, boolean endangered) {
-		super(name, age, gender, size, species, height, weight, waste);
+		super(name, age, gender, size, species, height, weight, waste, foodmass, foodmass);
 		this.nocturnal = nocturnal;
 		this.endangered = endangered;
 	}
 
-	@Override
-	public String nutrition() {
-		System.out.println("Bat eats");
-		return null;
-	}
+	
 
 	@Override
 	public void flight() {
