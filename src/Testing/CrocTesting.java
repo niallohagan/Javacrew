@@ -83,4 +83,28 @@ public class CrocTesting {
 		assertEquals(snappy.getAbilityToSwim(), true);
 
 	}
+
+	// testing methods
+
+	@Test
+
+	// test to check Growth
+
+	public void testGrowth() {
+		Crocodile snappy = new Crocodile("Crock", "crocodile", "male", "large", 12, 0, 0, 0, 0, 0, 0, false, false);
+		snappy.growth();
+		snappy.setHeight(20);
+		assertEquals(20, snappy.getHeight());
+	}
+
+	@Test
+
+	// test to check canSwim
+
+	public void testCanSwim() {
+		Crocodile snappy = new Crocodile("Crock", "crocodile", "male", "large", 12, 0, 0, 0, 0, 0, 0, false, false);
+		snappy.canSwim();
+		snappy.getAbilityToSwim();
+		assertEquals(true, snappy.getAbilityToSwim());
+	}
 }

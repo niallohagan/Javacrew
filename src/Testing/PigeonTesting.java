@@ -127,5 +127,51 @@ public class PigeonTesting {
 		assertEquals(testP.getOptimalFlightTime(), 20);
 
 	}
+// testing methods
+	
+	@Test
 
+	// test to check Growth
+
+	public void testGrowth() {
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		testP.growth();
+		testP.setHeight(20);
+		assertEquals(20, testP.getHeight());
+	}
+	@ Test 
+	
+	// Test to check takeoff
+	
+	public void testTakeOff() {
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		testP.setPower(100);
+		testP.setSpeed(2);
+
+		testP.getTakeOffSpeed();
+		assertEquals(200, testP.getTakeOffSpeed());
+	}
+	
+	@Test
+	// Test to check landing
+	
+	public void testLanding() {
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		testP.landing();
+		testP.setSpeed(100);
+
+		
+		assertEquals(100, testP.getLandingSpeed());
+	}
+	@Test
+	// Test to check flight
+	
+	public void testFlight() {
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		testP.flight();
+		testP.setOptimalFlightTime(20);
+
+		
+		assertEquals(20, testP.getOptimalFlightTime());
+	}
 }

@@ -105,5 +105,17 @@ public class SnakeTesting {
 		assertEquals(testSnake.isDangerous(), true);
 
 	}
+	
+	// testing methods
+	@Test
 
+	// test to check Growth
+
+	public void testGrowth() {
+		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 1.0, 0, true, false, true,
+				true);
+		testSnake.growth();
+		testSnake.setHeight(20);
+		assertEquals(20, testSnake.getHeight());
+	}
 }

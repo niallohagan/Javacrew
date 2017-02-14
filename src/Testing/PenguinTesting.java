@@ -61,4 +61,28 @@ public class PenguinTesting {
 		assertEquals(Puffy.isAbilityToSwim(), true);
 
 	}
+
+	// testing methods
+
+	@Test
+
+	// test to check Growth
+
+	public void testGrowth() {
+		Penguin Puffy = new Penguin("Puffy", "penguin", "male", "large", 10, 0, 0, 0, 0, 0, 0, false);
+		Puffy.growth();
+		Puffy.setHeight(20);
+		assertEquals(20, Puffy.getHeight());
+	}
+
+	@Test
+
+	// test to check canSwim
+
+	public void testCanSwim() {
+		Penguin Puffy = new Penguin("Puffy", "penguin", "male", "large", 10, 0, 0, 0, 0, 0, 0, false);
+		Puffy.canSwim();
+		Puffy.isAbilityToSwim();
+		assertEquals(true, Puffy.isAbilityToSwim());
+	}
 }

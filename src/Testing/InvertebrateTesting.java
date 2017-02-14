@@ -66,5 +66,42 @@ public class InvertebrateTesting {
 		assertEquals(testInvert.isHasLegs(), true);
 
 	}
+	// testing methods
+
+	@Test
+
+	// test to check Growth
+
+	public void testGrowth() {
+		Invertebrate testInvert = new Invertebrate("Bob", 10, "invertebrate", "male", "small", 0, 0, 0, 0, 0, 0, false,
+				false);
+		testInvert.growth();
+		testInvert.setHeight(20);
+		assertEquals(20, testInvert.getHeight());
+	}
+
+	@Test
+
+	// test to check movement
+
+	public void testMovement() {
+		Invertebrate testInvert = new Invertebrate("Bob", 10, "invertebrate", "male", "small", 0, 0, 0, 0, 0, 0, false,
+				false);
+		testInvert.movement();
+		testInvert.getSpecies();
+		assertEquals(true, testInvert.isHasLegs());
+	}
+
+	@Test
+
+	// test to check reproduction
+
+	public void testReproduction() {
+		Invertebrate testInvert = new Invertebrate("Bob", 10, "invertebrate", "male", "small", 0, 0, 0, 0, 0, 0, false,
+				false);
+		testInvert.reproduction();
+		testInvert.getSize();
+		assertEquals(true, testInvert.isReproduceSexually());
+	}
 
 }

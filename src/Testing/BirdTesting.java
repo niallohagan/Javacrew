@@ -84,4 +84,30 @@ public class BirdTesting {
 		assertEquals(BigBird.getSprintFactor(), 20);
 
 	}
+
+	// testing methods
+
+	@Test
+
+	// test to check movement
+
+	public void testMovement() {
+		Bird BigBird = new Bird("Wings", 0, "bird", "female", "small", 3, 0, 0, 0, 0, 0);
+		BigBird.movement();
+		BigBird.isCanFly();
+		assertEquals(true, BigBird.isCanFly());
+	}
+
+	@Test
+
+	// test to check sprint
+
+	public void testSprint() {
+		Bird BigBird = new Bird("Wings", 0, "bird", "female", "small", 3, 0, 0, 0, 0, 0);
+		BigBird.setSpeed(100);
+		BigBird.setSprintFactor(1);
+		BigBird.getSpeed();
+		assertEquals(100, BigBird.getSpeed());
+	}
+
 }

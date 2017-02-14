@@ -150,5 +150,62 @@ public class BatTesting {
 		assertEquals(Vampy.getOptimalFlightTime(), 20);
 
 	}
+	// testing methods
 
+	@Test
+
+	// test to check Growth
+
+	public void testGrowth() {
+		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
+		Vampy.growth();
+		Vampy.setHeight(20);
+		assertEquals(20, Vampy.getHeight());
+	}
+
+	@Test
+
+	// Test to check takeoff
+
+	public void testTakeOff() {
+		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
+		Vampy.setPower(100);
+		Vampy.setSpeed(2);
+
+		Vampy.getTakeOffSpeed();
+		assertEquals(200, Vampy.getTakeOffSpeed());
+	}
+
+	@Test
+
+	// test to check movement
+
+	public void testMovement() {
+		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
+		Vampy.movement();
+		Vampy.isCanFly();
+		assertEquals(true, Vampy.isCanFly());
+	}
+
+	@Test
+	// Test to check landing
+
+	public void testLanding() {
+		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
+		Vampy.landing();
+		Vampy.setSpeed(100);
+
+		assertEquals(100, Vampy.getLandingSpeed());
+	}
+
+	@Test
+	// Test to check flight
+
+	public void testFlight() {
+		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
+		Vampy.flight();
+		Vampy.setOptimalFlightTime(20);
+
+		assertEquals(20, Vampy.getOptimalFlightTime());
+	}
 }

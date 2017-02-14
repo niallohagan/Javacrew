@@ -61,4 +61,17 @@ public class CatTesting {
 		assertEquals(testC.isEndangered(), true);
 
 	}
+
+	// testing methods
+
+	@Test
+
+	// test to check Growth
+
+	public void testGrowth() {
+		Cat testC = new Cat("Idiot", "Cat", "female", "size", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
+		testC.growth();
+		testC.setHeight(20);
+		assertEquals(20, testC.getHeight());
+	}
 }
