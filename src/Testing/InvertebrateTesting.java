@@ -89,7 +89,7 @@ public class InvertebrateTesting {
 				false);
 		testInvert.movement();
 		testInvert.getSpecies();
-		assertEquals(true, testInvert.isHasLegs());
+		assertEquals(false, testInvert.isHasLegs());
 	}
 
 	@Test
@@ -101,7 +101,7 @@ public class InvertebrateTesting {
 				false);
 		testInvert.reproduction();
 		testInvert.getSize();
-		assertEquals(true, testInvert.isReproduceSexually());
+		assertEquals(false, testInvert.isReproduceSexually());
 	}
 
 }

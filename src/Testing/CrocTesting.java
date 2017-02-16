@@ -105,6 +105,6 @@ public class CrocTesting {
 		Crocodile snappy = new Crocodile("Crock", "crocodile", "male", "large", 12, 0, 0, 0, 0, 0, 0, false, false);
 		snappy.canSwim();
 		snappy.getAbilityToSwim();
-		assertEquals(true, snappy.getAbilityToSwim());
+		assertEquals(false, snappy.getAbilityToSwim());
 	}
 }

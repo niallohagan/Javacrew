@@ -13,7 +13,7 @@ public class PigeonTesting {
 	@Test
 
 	public void testPigeonConstructor() {
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 		assertNotNull(testP);
 	}
 	// testing G and C
@@ -22,7 +22,7 @@ public class PigeonTesting {
 
 	public void testIsEndangered() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		assertEquals(testP.isEndangered(), false);
 
@@ -32,7 +32,7 @@ public class PigeonTesting {
 
 	public void testSetEndangered() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		testP.setEndangered(true);
 
@@ -44,7 +44,7 @@ public class PigeonTesting {
 
 	public void testGetLandingSpeed() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		assertEquals(testP.getLandingSpeed(), 0);
 
@@ -54,7 +54,7 @@ public class PigeonTesting {
 
 	public void testLandingSpeed() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		testP.setLandingSpeed(20);
 
@@ -66,7 +66,7 @@ public class PigeonTesting {
 
 	public void testGetTakeOffSpeed() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		assertEquals(testP.getTakeOffSpeed(), 0);
 
@@ -76,7 +76,7 @@ public class PigeonTesting {
 
 	public void testSetTakeOffSpeed() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		testP.setTakeOffSpeed(20);
 
@@ -88,7 +88,7 @@ public class PigeonTesting {
 
 	public void testGetPower() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		assertEquals(testP.getPower(), 0);
 
@@ -98,11 +98,11 @@ public class PigeonTesting {
 
 	public void testSetPower() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
-		testP.setTakeOffSpeed(20);
+		testP.setTakeOffSpeed(0);
 
-		assertEquals(testP.getPower(), 20);
+		assertEquals(testP.getPower(), 0);
 
 	}
 
@@ -110,7 +110,7 @@ public class PigeonTesting {
 
 	public void testGetOptimalFlightTime() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		assertEquals(testP.getOptimalFlightTime(), 0);
 
@@ -120,7 +120,7 @@ public class PigeonTesting {
 
 	public void testSetOptimalFlightTime() {
 
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 
 		testP.setOptimalFlightTime(20);
 
@@ -134,7 +134,7 @@ public class PigeonTesting {
 	// test to check Growth
 
 	public void testGrowth() {
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 		testP.growth();
 		testP.setHeight(20);
 		assertEquals(20, testP.getHeight());
@@ -144,30 +144,30 @@ public class PigeonTesting {
 	// Test to check takeoff
 	
 	public void testTakeOff() {
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
-		testP.setPower(100);
-		testP.setSpeed(2);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
+		testP.takeOff();
+		testP.setTakeOffSpeed(20);
 
-		testP.getTakeOffSpeed();
-		assertEquals(200, testP.getTakeOffSpeed());
+		
+		assertEquals(20, testP.getTakeOffSpeed());
 	}
 	
 	@Test
-	// Test to check landing
+	// Test to check landing 
 	
 	public void testLanding() {
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 		testP.landing();
 		testP.setSpeed(100);
 
 		
-		assertEquals(100, testP.getLandingSpeed());
+		assertEquals(100, testP.getSpeed());
 	}
 	@Test
 	// Test to check flight
 	
 	public void testFlight() {
-		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, false);
+		Pigeon testP = new Pigeon("Joe", "male", "small", "pigeon", 2, 0, 0, 0, 0, 0, 0, 0, false, 0, 0, 0);
 		testP.flight();
 		testP.setOptimalFlightTime(20);
 

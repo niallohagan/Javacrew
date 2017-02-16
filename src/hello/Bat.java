@@ -11,9 +11,9 @@ public class Bat extends Mammal implements Flying {
 	private boolean endangered;
 
 	public Bat(String name, String species, String gender, String size, int age, int height, int weight, int waste,
-			int foodmass, int speed, int sprintFactor, double growthFactor, int breathingRate, boolean nocturnal,
+			int foodmass, int speed, int sprintFactor, double growthFactor, int power, boolean nocturnal,
 			boolean endangered) {
-		super(name, age, gender, size, species, height, weight, waste, foodmass, foodmass, breathingRate, speed,
+		super(name, age, gender, size, species, height, weight, waste, foodmass, foodmass, power, speed,
 				sprintFactor);
 		this.nocturnal = nocturnal;
 		this.endangered = endangered;
@@ -61,7 +61,7 @@ public class Bat extends Mammal implements Flying {
 
 	@Override
 	public String takeOff() {
-		if (getSpeed() * power == takeOffSpeed) {
+		if (takeOffSpeed > 18) {
 			return "Take off successful";
 		} else {
 			return "take off not successful";

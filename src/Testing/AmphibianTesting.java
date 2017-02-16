@@ -25,7 +25,7 @@ public class AmphibianTesting {
 
 		Amphibian Amp = new Amphibian("Ampy", 0, "Amphibian", "male", "large", 10, 0, 0, 0, 0, 0);
 
-		assertEquals(Amp.isAbilityToSwim(), true);
+		assertEquals(Amp.isAbilityToSwim(), false);
 
 	}
 
@@ -61,6 +61,6 @@ public class AmphibianTesting {
 		Amphibian Amp = new Amphibian("Ampy", 0, "Amphibian", "male", "large", 10, 0, 0, 0, 0, 0);
 		Amp.canSwim();
 		Amp.isAbilityToSwim();
-		assertEquals(true, Amp.isAbilityToSwim());
+		assertEquals(false, Amp.isAbilityToSwim());
 	}
 }

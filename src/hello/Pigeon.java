@@ -10,10 +10,15 @@ public class Pigeon extends Bird implements Flying {
 	boolean endangered;
 
 	public Pigeon(String name, String species, String gender, String size, int age, int height, int weight,
-			int waste, int foodmass, double growthFactor, int breathingRate,
-			boolean endangered) {
+			int waste, int foodmass, double growthFactor, int breathingRate, int power,
+			boolean endangered, int takeOffSpeed, int landingSpeed, int optimalFlightTime) {
 		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor, breathingRate);
 		this.endangered = endangered;
+		this.optimalFlightTime = optimalFlightTime;
+		this.landingSpeed = landingSpeed;
+		this.takeOffSpeed = takeOffSpeed;
+		this.power = power;
+		
 	}
 
 	@Override
@@ -27,7 +32,7 @@ public class Pigeon extends Bird implements Flying {
 	}
 	@Override
 	public String takeOff() {
-		if (getSpeed() * power == takeOffSpeed) {
+		if (takeOffSpeed > 20 ) {
 			return "Take off successful";
 		} else {
             return "take off not successful";

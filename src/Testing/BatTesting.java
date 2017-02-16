@@ -123,13 +123,13 @@ public class BatTesting {
 
 		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
 
-		Vampy.setTakeOffSpeed(20);
+		Vampy.setPower(20);
 
 		assertEquals(Vampy.getPower(), 20);
 
 	}
-
-	@Test
+ 
+	@Test 
 
 	public void testGetOptimalFlightTime() {
 
@@ -169,11 +169,12 @@ public class BatTesting {
 
 	public void testTakeOff() {
 		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
-		Vampy.setPower(100);
-		Vampy.setSpeed(2);
+		Vampy.takeOff();
+		Vampy.setTakeOffSpeed(20);
 
-		Vampy.getTakeOffSpeed();
-		assertEquals(200, Vampy.getTakeOffSpeed());
+		
+		assertEquals(20, Vampy.getTakeOffSpeed());
+	
 	}
 
 	@Test
@@ -184,7 +185,7 @@ public class BatTesting {
 		Bat Vampy = new Bat("Drak", "Bat", "female", "small", 2, 0, 0, 0, 0, 0, 0, 0, 0, false, false);
 		Vampy.movement();
 		Vampy.isCanFly();
-		assertEquals(true, Vampy.isCanFly());
+		assertEquals(false, Vampy.isCanFly());
 	}
 
 	@Test
@@ -195,7 +196,7 @@ public class BatTesting {
 		Vampy.landing();
 		Vampy.setSpeed(100);
 
-		assertEquals(100, Vampy.getLandingSpeed());
+		assertEquals(100, Vampy.getSpeed());
 	}
 
 	@Test

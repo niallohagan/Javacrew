@@ -83,6 +83,6 @@ public class PenguinTesting {
 		Penguin Puffy = new Penguin("Puffy", "penguin", "male", "large", 10, 0, 0, 0, 0, 0, 0, false);
 		Puffy.canSwim();
 		Puffy.isAbilityToSwim();
-		assertEquals(true, Puffy.isAbilityToSwim());
+		assertEquals(false, Puffy.isAbilityToSwim());
 	}
 }

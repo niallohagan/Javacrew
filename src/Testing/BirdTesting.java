@@ -95,7 +95,7 @@ public class BirdTesting {
 		Bird BigBird = new Bird("Wings", 0, "bird", "female", "small", 3, 0, 0, 0, 0, 0);
 		BigBird.movement();
 		BigBird.isCanFly();
-		assertEquals(true, BigBird.isCanFly());
+		assertEquals(false, BigBird.isCanFly());
 	}
 
 	@Test
