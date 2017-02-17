@@ -1,6 +1,6 @@
 package hello;
 
-public abstract class Animal implements LivingThings {
+public class Animal implements LivingThings {
 
 	private String name;
 	private int age;
@@ -75,9 +75,9 @@ public abstract class Animal implements LivingThings {
 	@Override
 	public String movement() {
 		if (size != "small") {
-			return "Animal moves a lot and needs a large enclosure";
+			return "Large enclosure";
 		} else {
-			return "Animal can live in a smaller enclosure";
+			return "Small enclosure";
 		}
 
 	}

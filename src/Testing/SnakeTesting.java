@@ -24,11 +24,11 @@ public class SnakeTesting {
 
 		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
-		assertEquals(testSnake.isPoisonous(), false);
+		assertEquals(testSnake.isPoisonous(), true);
 
 	}
 
-	@Test
+	@Test 
 
 	public void testSetPoisonous() {
 
@@ -46,7 +46,7 @@ public class SnakeTesting {
 
 		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
-		assertEquals(testSnake.isVenomous(), false);
+		assertEquals(testSnake.isVenomous(), true);
 
 	}
 
@@ -90,7 +90,7 @@ public class SnakeTesting {
 
 		Snake testSnake = new Snake("Hissy", "Viper", "male", "Large", 3, 20, 150, 0, 0, 0, 0, true, false, true, true);
 
-		assertEquals(testSnake.isDangerous(), false);
+		assertEquals(testSnake.isDangerous(), true);
 
 	}
 
