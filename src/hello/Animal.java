@@ -1,6 +1,6 @@
 package hello;
 
-public class Animal implements LivingThings {
+public abstract class Animal implements LivingThings {
 
 	private String name;
 	private int age;

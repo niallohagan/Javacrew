@@ -72,8 +72,8 @@ public class AnimalBuilder {
 		return this;
 	}
 	
-	public Animal createAniaml(){ 
-		return new Animal(name, age, species, size, gender, height, weight, waste, foodmass, growthFactor, breathingRate);
-	}
+	//public Animal createAniaml(){ 
+		//return new Animal(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
+	//}
 
 }
