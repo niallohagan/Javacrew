@@ -6,12 +6,20 @@ package hello;
 public class Amphibian extends Animal implements Swim {
 
 	private boolean abilityToSwim;
-	
+	/*
 	public Amphibian(String name, int age, String species, String gender, String size, int height, int weight, int waste, int foodmass, double growthFactor, int breathingRate) {
 		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
 
 	}
+*/
+	
+	public Amphibian(String species, String gender) {
 
+		super(species, gender);
+
+	}
+
+	
 	
 	
 	@Override
@@ -24,6 +32,13 @@ public class Amphibian extends Animal implements Swim {
 
 	return getSize();
 }
+
+	private void setSize(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 	@Override
 	public String canSwim() {

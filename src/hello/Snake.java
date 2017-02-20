@@ -6,7 +6,7 @@ public class Snake extends Reptile {
 	private boolean venomous;
 	private boolean dangerous;
 	private boolean endangered;
-
+/*
 	public Snake(String name, String species, String gender, String size, int age, int height, int weight, int waste,
 			int foodmass, double growthFactor, int breathingRate, boolean poisonous, boolean endangered,
 			boolean venomous, boolean dangerous) {
@@ -16,7 +16,15 @@ public class Snake extends Reptile {
 		this.dangerous = dangerous;
 		this.endangered = endangered;
 	}
+*/
+	
+	public Snake(String species, String gender) {
 
+		super(species, gender);
+
+	}
+
+	
 	@Override
 	public String growth() {
 		if (height <= 10) {
@@ -25,6 +33,11 @@ public class Snake extends Reptile {
 			setSize("large");
 		}
 		return getSize();
+	}
+
+	protected void setSize(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public boolean isPoisonous() {

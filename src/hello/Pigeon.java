@@ -8,7 +8,7 @@ public class Pigeon extends Bird implements Flying {
 	private int takeOffSpeed;
 	private int power;
 	boolean endangered;
-
+/*
 	public Pigeon(String name, String species, String gender, String size, int age, int height, int weight,
 			int waste, int foodmass, double growthFactor, int breathingRate, int power,
 			boolean endangered, int takeOffSpeed, int landingSpeed, int optimalFlightTime) {
@@ -20,7 +20,14 @@ public class Pigeon extends Bird implements Flying {
 		this.power = power;
 		
 	}
+*/
+	public Pigeon(String species, String gender) {
 
+		super(species, gender);
+
+	}
+
+	
 	@Override
 	public String growth() {
 		if (height <= 15) {
@@ -30,6 +37,11 @@ public class Pigeon extends Bird implements Flying {
 		}
 		return getSize();
 	}
+	private void setSize(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	@Override
 	public String takeOff() {
 		if (takeOffSpeed > 20 ) {

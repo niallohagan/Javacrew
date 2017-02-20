@@ -6,11 +6,19 @@ public class Bird extends Animal {
 	private int sprintFactor;
 	private boolean canFly;
 
-	public Bird(String name, int age, String species, String gender, String size, int height, int weight, int waste,
+	/*public Bird(String name, int age, String species, String gender, String size, int height, int weight, int waste,
 			int foodmass, double growthFactor, int breathingRate) {
 		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
 
+	}*/
+	
+	public Bird(String species, String gender) {
+
+		super(species, gender);
+
 	}
+
+	
 
 	@Override
 	public String movement() {

@@ -4,7 +4,7 @@ public class Invertebrate extends Animal {
 
 	boolean reproduceSexually;
 	boolean hasLegs;
-
+/*
 	public Invertebrate(String name, int age, String species, String gender, String size, int height, int weight,
 			int waste, int foodmass, double growthFactor, int breathingRate, boolean reproduceSexually,
 			boolean hasLegs) {
@@ -12,6 +12,14 @@ public class Invertebrate extends Animal {
 		this.reproduceSexually = reproduceSexually;
 		this.hasLegs = hasLegs;
 	}
+	*/
+	public Invertebrate(String species, String gender) {
+
+		super(species, gender);
+
+	}
+
+	
 
 	@Override
 	public String movement() {
@@ -30,6 +38,11 @@ public class Invertebrate extends Animal {
 			setSize("large");
 		}
 		return getSize();
+	}
+
+	private void setSize(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override

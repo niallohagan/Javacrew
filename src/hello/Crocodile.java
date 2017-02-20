@@ -5,14 +5,22 @@ public class Crocodile extends Reptile implements Swim {
 	private boolean abilityToSwim;
 	boolean endangered;
 	boolean dangerous;
-
+/*
 	public Crocodile(String name, String species, String gender, String size, int age, int height, int weight,
 			int waste, int foodmass, double growthFactor, int breathingRate, boolean dangerous, boolean endangered) {
 		super(name, age, gender, size, species, height, weight, waste, foodmass, growthFactor, breathingRate);
 		this.endangered = endangered;
 		this.dangerous = dangerous;
 	}
+*/
+	
+	public Crocodile(String species, String gender) {
 
+		super(species, gender);
+
+	}
+
+	
 	@Override
 	public String growth() {
 		if (height <= 30) {

@@ -9,7 +9,7 @@ public class Bat extends Mammal implements Flying {
 	private int power;
 	private boolean nocturnal;
 	private boolean endangered;
-
+/*
 	public Bat(String name, String species, String gender, String size, int age, int height, int weight, int waste,
 			int foodmass, int speed, int sprintFactor, double growthFactor, int power, boolean nocturnal,
 			boolean endangered) {
@@ -18,7 +18,15 @@ public class Bat extends Mammal implements Flying {
 		this.nocturnal = nocturnal;
 		this.endangered = endangered;
 	}
+*/
+	
+	public Bat(String species, String gender) {
 
+		super(species, gender);
+
+	}
+
+	
 	@Override
 	public String growth() {
 		if (height <= 20) {

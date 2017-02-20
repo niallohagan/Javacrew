@@ -3,13 +3,21 @@ package hello;
 public class Fish extends Animal implements Swim {
 
 	private boolean abilityToSwim;
-
+/*
 	public Fish(String name, int age, String species, String gender, String size, int height, int weight, int waste,
 			int foodmass, double growthFactor, int breathingRate) {
 		super(name, age, species, gender, size, height, weight, waste, foodmass, growthFactor, breathingRate);
 
 	}
+	*/
+	
+	public Fish(String species, String gender) {
 
+		super(species, gender);
+
+	}
+
+	
 	@Override
 	public String growth() {
 		if (height <= 25) {
@@ -18,6 +26,11 @@ public class Fish extends Animal implements Swim {
 			setSize("large");
 		}
 		return getSize();
+	}
+
+	private void setSize(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
